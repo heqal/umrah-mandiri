@@ -4,6 +4,11 @@
  * Tambah langkah itinerary: salin satu blok { ... } di "itinerary" dan beri "id" yang unik.
  * Kode bacaan seperti B8 pada kolom "bacaan"/"doa" otomatis menjadi tombol yang membuka bacaan terkait.
  * Hapus/ubah tab di "tabs" untuk menyembunyikan bagian tertentu.
+ *
+ * KATEGORI (dipakai oleh filter di tab Bacaan & Doa, Lokasi Doa, dan Shalat):
+ *   "hukum"      : "wajib" atau "sunnah"
+ *   "lokasiKat"  : daftar lokasi, nilainya harus persis sama dengan salah satu isi "kategoriLokasi"
+ *   "kategoriLokasi" : daftar pilihan lokasi pada filter (tambah/ubah/urutkan sesuka Anda)
  */
 window.UMRAH_DATA = {
   "meta": {
@@ -653,7 +658,12 @@ window.UMRAH_DATA = {
       "latin": "Subhaanalladzii sakh-khara lanaa haadzaa wa maa kunnaa lahu muqriniin, wa innaa ilaa rabbinaa lamunqalibuun.",
       "arti": "Maha Suci Allah yang menundukkan kendaraan ini untuk kami, padahal kami tidak mampu menguasainya. Dan sesungguhnya kepada Tuhan kami, kami akan kembali.",
       "saat": "Naik pesawat/bus, memulai perjalanan.",
-      "sumber": "Q.S. Az-Zukhruf: 13–14; HR. Muslim."
+      "sumber": "Q.S. Az-Zukhruf: 13–14; HR. Muslim.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Bandara / Pesawat",
+        "Perjalanan (bus/kereta)"
+      ]
     },
     {
       "kode": "B2",
@@ -663,7 +673,13 @@ window.UMRAH_DATA = {
       "latin": "Allaahummaf-tah lii abwaaba rahmatik.",
       "arti": "Ya Allah, bukakanlah untukku pintu-pintu rahmat-Mu.",
       "saat": "Masuk Masjid Nabawi dan Masjidil Haram (kaki kanan terlebih dahulu).",
-      "sumber": "HR. Muslim."
+      "sumber": "HR. Muslim.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Masjidil Haram",
+        "Masjid Nabawi",
+        "Masjid Quba & masjid bersejarah"
+      ]
     },
     {
       "kode": "B3",
@@ -673,7 +689,13 @@ window.UMRAH_DATA = {
       "latin": "Allaahumma innii as-aluka min fadhlik.",
       "arti": "Ya Allah, aku memohon karunia-Mu.",
       "saat": "Keluar masjid (kaki kiri terlebih dahulu).",
-      "sumber": "HR. Muslim."
+      "sumber": "HR. Muslim.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Masjidil Haram",
+        "Masjid Nabawi",
+        "Masjid Quba & masjid bersejarah"
+      ]
     },
     {
       "kode": "B4",
@@ -683,7 +705,13 @@ window.UMRAH_DATA = {
       "latin": "Allaahumma shalli 'alaa Muhammad wa 'alaa aali Muhammad, kamaa shallaita 'alaa Ibraahiim wa 'alaa aali Ibraahiim, innaka hamiidum majiid. Allaahumma baarik 'alaa Muhammad wa 'alaa aali Muhammad, kamaa baarakta 'alaa Ibraahiim wa 'alaa aali Ibraahiim, innaka hamiidum majiid.",
       "arti": "Ya Allah, limpahkanlah shalawat kepada Muhammad dan keluarganya sebagaimana Engkau limpahkan kepada Ibrahim dan keluarganya; sesungguhnya Engkau Maha Terpuji lagi Maha Mulia. Ya Allah, berkahilah Muhammad dan keluarganya sebagaimana Engkau berkahi Ibrahim dan keluarganya.",
       "saat": "Di Madinah, di Raudhah, dan kapan saja.",
-      "sumber": "HR. Bukhari–Muslim."
+      "sumber": "HR. Bukhari–Muslim.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Masjid Nabawi",
+        "Raudhah",
+        "Makam Nabi ﷺ"
+      ]
     },
     {
       "kode": "B5",
@@ -693,7 +721,11 @@ window.UMRAH_DATA = {
       "latin": "Assalaamu 'alaika yaa Rasuulallaah wa rahmatullaahi wa barakaatuh.\nAssalaamu 'alaika yaa Abaa Bakr ash-shiddiiq.\nAssalaamu 'alaika yaa 'Umar al-faaruuq.",
       "arti": "Salam sejahtera atasmu, wahai Rasulullah, beserta rahmat dan berkah Allah. Salam atasmu, wahai Abu Bakar ash-Shiddiq. Salam atasmu, wahai Umar al-Faruq.",
       "saat": "Di Muwajahah Syarifah (depan makam Nabi ﷺ).",
-      "sumber": "Amalan Ibnu Umar r.a. (diriwayatkan Malik, Baihaqi). Cukup singkat dan sopan."
+      "sumber": "Amalan Ibnu Umar r.a. (diriwayatkan Malik, Baihaqi). Cukup singkat dan sopan.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Makam Nabi ﷺ"
+      ]
     },
     {
       "kode": "B6",
@@ -703,7 +735,12 @@ window.UMRAH_DATA = {
       "latin": "Assalaamu 'alaikum ahlad-diyaari minal mu'miniina wal muslimiin, wa innaa insyaa Allaahu bikum lalaahiquun, as-alullaaha lanaa wa lakumul 'aafiyah.",
       "arti": "Salam atas kalian, penghuni kubur dari kalangan mukminin dan muslimin. Insya Allah kami akan menyusul kalian. Aku memohon kepada Allah keselamatan bagi kami dan kalian.",
       "saat": "Ziarah Baqi' dan Uhud.",
-      "sumber": "HR. Muslim. Buku Kemenhaj hlm. 290–291."
+      "sumber": "HR. Muslim. Buku Kemenhaj hlm. 290–291.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Baqi' & Uhud (ziarah kubur)",
+        "Ziarah Makkah"
+      ]
     },
     {
       "kode": "B6b",
@@ -713,7 +750,11 @@ window.UMRAH_DATA = {
       "latin": "Assalaamu 'alaikum daara qaumin mu'miniin, wa ataakum maa tuu'aduuna ghadan mu-ajjaluun, wa innaa insyaa Allaahu bikum laahiquun. Allaahummaghfir li-ahli baqii'il gharqad.",
       "arti": "Salam sejahtera atas kalian wahai penghuni rumah kaum beriman. Apa yang dijanjikan kepada kalian, yang masih ditangguhkan esok, pasti akan datang kepada kalian, dan kami insya Allah akan menyusul kalian. Ya Allah, ampunilah ahli Baqi' al-Gharqad.",
       "saat": "Ziarah Baqi' (Hari 10).",
-      "sumber": "Buku Kemenhaj hlm. 290–291; HR. Muslim no. 974."
+      "sumber": "Buku Kemenhaj hlm. 290–291; HR. Muslim no. 974.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Baqi' & Uhud (ziarah kubur)"
+      ]
     },
     {
       "kode": "B7",
@@ -723,7 +764,11 @@ window.UMRAH_DATA = {
       "latin": "Nawaitul 'umrata wa ahramtu bihaa lillaahi ta'aalaa.\n(atau) Labbaikallaahumma 'umratan.",
       "arti": "Aku berniat umrah dan berihram untuknya karena Allah Ta'ala. / Aku penuhi panggilan-Mu ya Allah untuk umrah.",
       "saat": "Di atas pesawat saat sejajar miqat Yalamlam (atau di miqat lain), setelah shalat sunnah ihram bila memungkinkan.",
-      "sumber": "Niat di hati adalah pokok; melafalkannya boleh. Lafaz kedua: HR. Muslim. Jika khawatir terhalang (sakit/haid), lihat sheet Catatan. Buku Kemenhaj hlm. 192, 256 (niat umrah di pesawat sebelum melintas Yalamlam/Qarnul Manazil)."
+      "sumber": "Niat di hati adalah pokok; melafalkannya boleh. Lafaz kedua: HR. Muslim. Jika khawatir terhalang (sakit/haid), lihat sheet Catatan. Buku Kemenhaj hlm. 192, 256 (niat umrah di pesawat sebelum melintas Yalamlam/Qarnul Manazil).",
+      "hukum": "wajib",
+      "lokasiKat": [
+        "Bandara / Pesawat"
+      ]
     },
     {
       "kode": "B7b",
@@ -733,7 +778,11 @@ window.UMRAH_DATA = {
       "latin": "Allaahumma labbaika 'umratan, wa in habasanii haabisun fa mahallii haitsu habastanii.",
       "arti": "Aku sambut panggilan-Mu ya Allah untuk berumrah. Tetapi jika aku terhalang oleh sesuatu, maka aku akan bertahallul di tempat aku terhalang itu.",
       "saat": "Menggantikan B7 bagi yang lemah, sakit, atau khawatir terhalang.",
-      "sumber": "Buku Kemenhaj hlm. 193, 256–257; HR. Muslim."
+      "sumber": "Buku Kemenhaj hlm. 193, 256–257; HR. Muslim.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Bandara / Pesawat"
+      ]
     },
     {
       "kode": "B8",
@@ -743,7 +792,13 @@ window.UMRAH_DATA = {
       "latin": "Labbaika Allaahumma labbaik, labbaika laa syariika laka labbaik, innal hamda wan ni'mata laka wal mulk, laa syariika lak.",
       "arti": "Aku penuhi panggilan-Mu ya Allah, aku penuhi panggilan-Mu. Aku penuhi panggilan-Mu, tiada sekutu bagi-Mu, aku penuhi panggilan-Mu. Sesungguhnya segala puji, nikmat, dan kerajaan adalah milik-Mu, tiada sekutu bagi-Mu.",
       "saat": "Sejak niat ihram hingga mulai thawaf (umrah). Pria: keras; wanita: pelan.",
-      "sumber": "HR. Bukhari no. 1549. Buku Kemenhaj hlm. 111–114: sunnah menurut Syafi'i dan Ahmad; diulang 3× berturut-turut tanpa jeda, lalu shalawat dan doa; berhenti saat mulai thawaf (umrah); pria keras, wanita pelan."
+      "sumber": "HR. Bukhari no. 1549. Buku Kemenhaj hlm. 111–114: sunnah menurut Syafi'i dan Ahmad; diulang 3× berturut-turut tanpa jeda, lalu shalawat dan doa; berhenti saat mulai thawaf (umrah); pria keras, wanita pelan.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Bandara / Pesawat",
+        "Perjalanan (bus/kereta)",
+        "Hotel"
+      ]
     },
     {
       "kode": "B9",
@@ -753,7 +808,13 @@ window.UMRAH_DATA = {
       "latin": "Allaahumma shalli 'alaa Muhammad wa 'alaa aali Muhammad.\nAllaahumma innaa nas-aluka ridhaaka wal jannah, wa na'uudzu bika min ghadhabika wan naar. Rabbanaa aatinaa fid-dunyaa hasanah wa fil aakhirati hasanah wa qinaa 'adzaaban-naar.",
       "arti": "Ya Allah, limpahkan rahmat dan salam kepada Nabi Muhammad dan keluarganya. Ya Allah, kami memohon keridhaan-Mu dan surga-Mu, kami berlindung kepada-Mu dari kemurkaan-Mu dan siksa neraka. Wahai Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat dan hindarkan kami dari siksa neraka.",
       "saat": "Setelah selesai membaca talbiyah (didahului shalawat).",
-      "sumber": "Buku Kemenhaj hlm. 113 (shalawat, doa, dan Q.S. Al-Baqarah: 201)."
+      "sumber": "Buku Kemenhaj hlm. 113 (shalawat, doa, dan Q.S. Al-Baqarah: 201).",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Bandara / Pesawat",
+        "Perjalanan (bus/kereta)",
+        "Hotel"
+      ]
     },
     {
       "kode": "B10",
@@ -763,7 +824,11 @@ window.UMRAH_DATA = {
       "latin": "Allaahumma antas-salaam wa minkas-salaam fahayyinaa rabbanaa bis-salaam.",
       "arti": "Ya Allah, Engkau Maha Sejahtera, dari-Mu kesejahteraan; hidupkanlah kami, wahai Tuhan kami, dengan penuh kesejahteraan.",
       "saat": "Saat pertama melihat Ka'bah.",
-      "sumber": "Atsar Umar bin Khattab r.a. (Baihaqi), sanad terputus. Boleh ditambah doa bebas."
+      "sumber": "Atsar Umar bin Khattab r.a. (Baihaqi), sanad terputus. Boleh ditambah doa bebas.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Masjidil Haram"
+      ]
     },
     {
       "kode": "B11",
@@ -773,7 +838,11 @@ window.UMRAH_DATA = {
       "latin": "Bismillaahi wallaahu akbar.",
       "arti": "Dengan nama Allah, Allah Maha Besar.",
       "saat": "Setiap sejajar Hajar Aswad (awal thawaf dan akhir tiap putaran).",
-      "sumber": "HR. Bukhari (takbir); atsar Ibnu Umar r.a. (Baihaqi). Buku Kemenhaj hlm. 197."
+      "sumber": "HR. Bukhari (takbir); atsar Ibnu Umar r.a. (Baihaqi). Buku Kemenhaj hlm. 197.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Mataf (Thawaf)"
+      ]
     },
     {
       "kode": "B12",
@@ -783,7 +852,11 @@ window.UMRAH_DATA = {
       "latin": "Rabbanaa aatinaa fid-dunyaa hasanah, wa fil aakhirati hasanah, wa qinaa 'adzaaban-naar.",
       "arti": "Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, dan lindungilah kami dari azab neraka.",
       "saat": "Setiap putaran, di antara Rukun Yamani dan Hajar Aswad.",
-      "sumber": "Q.S. Al-Baqarah: 201; HR. Abu Dawud (hasan). Buku Kemenhaj hlm. 198–199 (Abu Daud no. 1892, hasan)."
+      "sumber": "Q.S. Al-Baqarah: 201; HR. Abu Dawud (hasan). Buku Kemenhaj hlm. 198–199 (Abu Daud no. 1892, hasan).",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Mataf (Thawaf)"
+      ]
     },
     {
       "kode": "B13",
@@ -793,7 +866,12 @@ window.UMRAH_DATA = {
       "latin": "Wattakhidzuu mim maqaami Ibraahiima mushallaa.\nRakaat 1: Al-Fatihah + Al-Kaafiruun.\nRakaat 2: Al-Fatihah + Al-Ikhlaash.",
       "arti": "Jadikanlah sebagian maqam Ibrahim sebagai tempat shalat.",
       "saat": "Setelah thawaf, ketika mendekati/di belakang Maqam Ibrahim.",
-      "sumber": "Q.S. Al-Baqarah: 125; HR. Muslim (hadis Jabir). Buku Kemenhaj hlm. 202 (cat. kaki 6)."
+      "sumber": "Q.S. Al-Baqarah: 125; HR. Muslim (hadis Jabir). Buku Kemenhaj hlm. 202 (cat. kaki 6).",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Maqam Ibrahim",
+        "Masjidil Haram"
+      ]
     },
     {
       "kode": "B14",
@@ -803,7 +881,11 @@ window.UMRAH_DATA = {
       "latin": "Allaahumma innii as-aluka 'ilman naafi'an, wa rizqan waasi'an, wa syifaa-an min kulli daa-in.",
       "arti": "Ya Allah, aku memohon ilmu yang bermanfaat, rezeki yang luas, dan kesembuhan dari segala penyakit.",
       "saat": "Setelah minum zamzam.",
-      "sumber": "Lafaz populer; riwayat lafaznya lemah. Yang kuat: zamzam sesuai niat peminumnya (HR. Ibnu Majah). Boleh berdoa dengan hajat lain. Buku Kemenhaj hlm. 202 (minum zamzam lalu berdoa)."
+      "sumber": "Lafaz populer; riwayat lafaznya lemah. Yang kuat: zamzam sesuai niat peminumnya (HR. Ibnu Majah). Boleh berdoa dengan hajat lain. Buku Kemenhaj hlm. 202 (minum zamzam lalu berdoa).",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Zamzam"
+      ]
     },
     {
       "kode": "B15",
@@ -813,7 +895,11 @@ window.UMRAH_DATA = {
       "latin": "Innash-shafaa wal-marwata min sya'aa-irillaah.\nAbda-u bimaa bada-allaahu bih.",
       "arti": "Sesungguhnya Shafa dan Marwah adalah sebagian syiar Allah. Aku mulai dengan apa yang Allah mulai.",
       "saat": "Ketika mendekati/naik Shafa (hanya di awal Sa'i).",
-      "sumber": "Q.S. Al-Baqarah: 158; HR. Muslim."
+      "sumber": "Q.S. Al-Baqarah: 158; HR. Muslim.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Shafa–Marwah (Sa'i)"
+      ]
     },
     {
       "kode": "B16",
@@ -823,7 +909,11 @@ window.UMRAH_DATA = {
       "latin": "Allaahu akbar (3×).\nLaa ilaaha illallaahu wahdahu laa syariika lah, lahul mulku wa lahul hamdu wa huwa 'alaa kulli syai-in qadiir. Laa ilaaha illallaahu wahdah, anjaza wa'dah, wa nashara 'abdah, wa hazamal ahzaaba wahdah.",
       "arti": "Allah Maha Besar. Tiada Tuhan selain Allah semata, tiada sekutu bagi-Nya; milik-Nya kerajaan dan pujian, dan Dia Maha Kuasa atas segala sesuatu. Tiada Tuhan selain Allah semata, Dia menepati janji-Nya, menolong hamba-Nya, dan mengalahkan golongan-golongan musuh sendirian.",
       "saat": "Di atas Shafa dan Marwah, menghadap Ka'bah; diulang 3× diselingi doa (sebanyak tiga kali).",
-      "sumber": "HR. Muslim (hadis Jabir)."
+      "sumber": "HR. Muslim (hadis Jabir).",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Shafa–Marwah (Sa'i)"
+      ]
     },
     {
       "kode": "B17",
@@ -833,7 +923,11 @@ window.UMRAH_DATA = {
       "latin": "Rabbighfir warham, innaka antal a'azzul akram.",
       "arti": "Ya Tuhanku, ampunilah dan rahmatilah; sesungguhnya Engkau Maha Perkasa lagi Maha Mulia.",
       "saat": "Saat Sa'i di antara dua penanda hijau.",
-      "sumber": "Atsar Ibnu Mas'ud dan Ibnu Umar r.a. Boleh diganti dzikir/doa lain."
+      "sumber": "Atsar Ibnu Mas'ud dan Ibnu Umar r.a. Boleh diganti dzikir/doa lain.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Shafa–Marwah (Sa'i)"
+      ]
     },
     {
       "kode": "B18",
@@ -843,7 +937,14 @@ window.UMRAH_DATA = {
       "latin": "Allaahumma innii as-alukal 'afwa wal 'aafiyata fid-dunyaa wal aakhirah.",
       "arti": "Ya Allah, aku memohon pemaafan dan keselamatan di dunia dan akhirat.",
       "saat": "Thawaf, Sa'i, Multazam, Raudhah, kapan saja.",
-      "sumber": "HR. Abu Dawud, Ibnu Majah (sahih)."
+      "sumber": "HR. Abu Dawud, Ibnu Majah (sahih).",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Mataf (Thawaf)",
+        "Multazam",
+        "Shafa–Marwah (Sa'i)",
+        "Raudhah"
+      ]
     },
     {
       "kode": "B19",
@@ -853,7 +954,14 @@ window.UMRAH_DATA = {
       "latin": "Allaahumma innaka 'afuwwun tuhibbul 'afwa fa'fu 'annii.",
       "arti": "Ya Allah, sesungguhnya Engkau Maha Pemaaf dan menyukai pemaafan, maka maafkanlah aku.",
       "saat": "Kapan saja; terutama malam hari.",
-      "sumber": "HR. Tirmidzi, Ibnu Majah (sahih)."
+      "sumber": "HR. Tirmidzi, Ibnu Majah (sahih).",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Mataf (Thawaf)",
+        "Multazam",
+        "Shafa–Marwah (Sa'i)",
+        "Raudhah"
+      ]
     },
     {
       "kode": "B20",
@@ -863,7 +971,14 @@ window.UMRAH_DATA = {
       "latin": "Rabbanaa zhalamnaa anfusanaa wa illam taghfir lanaa wa tarhamnaa lanakuunanna minal khaasiriin.",
       "arti": "Ya Tuhan kami, kami telah menzalimi diri kami sendiri. Jika Engkau tidak mengampuni dan merahmati kami, pastilah kami termasuk orang-orang yang rugi.",
       "saat": "Thawaf, Sa'i, Multazam.",
-      "sumber": "Q.S. Al-A'raf: 23."
+      "sumber": "Q.S. Al-A'raf: 23.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Mataf (Thawaf)",
+        "Multazam",
+        "Shafa–Marwah (Sa'i)",
+        "Raudhah"
+      ]
     },
     {
       "kode": "B21",
@@ -873,7 +988,14 @@ window.UMRAH_DATA = {
       "latin": "Rabbirhamhumaa kamaa rabbayaanii shaghiiraa.\nRabbighfir lii wa liwaalidayya.",
       "arti": "Ya Tuhanku, sayangilah keduanya sebagaimana mereka mendidikku waktu kecil. Ya Tuhanku, ampunilah aku dan kedua orang tuaku.",
       "saat": "Setiap doa; terutama Multazam dan Raudhah.",
-      "sumber": "Q.S. Al-Isra': 24; Q.S. Nuh: 28."
+      "sumber": "Q.S. Al-Isra': 24; Q.S. Nuh: 28.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Mataf (Thawaf)",
+        "Multazam",
+        "Shafa–Marwah (Sa'i)",
+        "Raudhah"
+      ]
     },
     {
       "kode": "B22",
@@ -883,7 +1005,14 @@ window.UMRAH_DATA = {
       "latin": "Rabbanaa hab lanaa min azwaajinaa wa dzurriyyaatinaa qurrata a'yunin waj'alnaa lil-muttaqiina imaamaa.",
       "arti": "Ya Tuhan kami, anugerahkanlah kepada kami pasangan dan keturunan sebagai penyejuk mata, dan jadikanlah kami pemimpin bagi orang-orang yang bertakwa.",
       "saat": "Setiap doa; Sa'i, Multazam.",
-      "sumber": "Q.S. Al-Furqan: 74."
+      "sumber": "Q.S. Al-Furqan: 74.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Mataf (Thawaf)",
+        "Multazam",
+        "Shafa–Marwah (Sa'i)",
+        "Raudhah"
+      ]
     },
     {
       "kode": "B23",
@@ -893,7 +1022,14 @@ window.UMRAH_DATA = {
       "latin": "Yaa muqallibal quluub, tsabbit qalbii 'alaa diinik.",
       "arti": "Wahai Dzat yang membolak-balikkan hati, teguhkanlah hatiku di atas agama-Mu.",
       "saat": "Kapan saja; mohon istiqamah sepulang umrah.",
-      "sumber": "HR. Tirmidzi (hasan)."
+      "sumber": "HR. Tirmidzi (hasan).",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Mataf (Thawaf)",
+        "Multazam",
+        "Shafa–Marwah (Sa'i)",
+        "Raudhah"
+      ]
     },
     {
       "kode": "B24",
@@ -903,7 +1039,12 @@ window.UMRAH_DATA = {
       "latin": "Alhamdulillaahilladzii qadhaa 'annaa nusukanaa. Allaahumma taqabbal minnaa 'umratanaa.",
       "arti": "Segala puji bagi Allah yang telah menyempurnakan ibadah kami. Ya Allah, terimalah umrah kami.",
       "saat": "Setelah bercukur atau menggunting rambut (tahallul).",
-      "sumber": "Buku Kemenhaj hlm. 206 menyebut 'doa mencukur rambut' dan hadis Nabi ﷺ mendoakan ampunan dan rahmat bagi yang bercukur gundul (HR. Bukhari 1727–1728) tanpa menuliskan lafaznya. Lafaz di sini adalah doa bebas yang lazim dibaca."
+      "sumber": "Buku Kemenhaj hlm. 206 menyebut 'doa mencukur rambut' dan hadis Nabi ﷺ mendoakan ampunan dan rahmat bagi yang bercukur gundul (HR. Bukhari 1727–1728) tanpa menuliskan lafaznya. Lafaz di sini adalah doa bebas yang lazim dibaca.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Shafa–Marwah (Sa'i)",
+        "Hotel"
+      ]
     },
     {
       "kode": "B25",
@@ -913,7 +1054,11 @@ window.UMRAH_DATA = {
       "latin": "Assalaamu 'alaika yaa 'amma rasuulillaah sayyidanaa Hamzata bna 'Abdil Muththalib. Assalaamu 'alaika yaa asadallaah wa asada rasuulih. Assalaamu 'alaika yaa sayyidasy syuhadaa-i. Assalaamu 'alaika yaa Mush'aba bna 'Umair.",
       "arti": "Salam untukmu wahai paman Nabi, Sayyidina Hamzah bin Abdul Muthalib; wahai singa Allah dan singa Rasul-Nya; wahai pemimpin para syuhada. Salam untukmu wahai Mush'ab bin Umair.",
       "saat": "Ziarah syuhada Uhud (Hari 11).",
-      "sumber": "Buku Kemenhaj hlm. 297–298 (ucapan salam kepada Hamzah, Mush'ab, dan syuhada Uhud)."
+      "sumber": "Buku Kemenhaj hlm. 297–298 (ucapan salam kepada Hamzah, Mush'ab, dan syuhada Uhud).",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Baqi' & Uhud (ziarah kubur)"
+      ]
     }
   ],
   "shalat": [
@@ -925,7 +1070,13 @@ window.UMRAH_DATA = {
       "bacaan": "Rakaat 1–2: Al-Fatihah + surat pendek. Qunut Subuh pada i'tidal rakaat 2 (sunnah menurut mazhab Syafi'i; ikuti imam jika imam tidak qunut).",
       "lokasi": "Berjamaah di Masjidil Haram (Hari 1–8) dan Masjid Nabawi (Hari 9–14). Boleh di hotel bila udzur/sakit.",
       "niat": "Ushallii fardhash shubhi rak'ataini mustaqbilal qiblati adaa-an lillaahi ta'aalaa. (Makmum: ... ma'muuman ...)",
-      "keterangan": "Shalat di Masjidil Haram bernilai 100.000 kali lipat, di Masjid Nabawi 1.000 kali lipat (HR. Ibnu Majah). Datang lebih awal agar mendapat shaf. Buku Kemenhaj hlm. 281, 314."
+      "keterangan": "Shalat di Masjidil Haram bernilai 100.000 kali lipat, di Masjid Nabawi 1.000 kali lipat (HR. Ibnu Majah). Datang lebih awal agar mendapat shaf. Buku Kemenhaj hlm. 281, 314.",
+      "hukum": "wajib",
+      "lokasiKat": [
+        "Masjidil Haram",
+        "Masjid Nabawi",
+        "Hotel"
+      ]
     },
     {
       "nama": "Shalat Dzuhur",
@@ -935,7 +1086,13 @@ window.UMRAH_DATA = {
       "bacaan": "Rakaat 1–2: Al-Fatihah + surat pendek; rakaat 3–4: Al-Fatihah saja.",
       "lokasi": "Masjidil Haram / Masjid Nabawi (berjamaah), atau hotel.",
       "niat": "Ushallii fardhadh dhuhri arba'a raka'aatin mustaqbilal qiblati adaa-an lillaahi ta'aalaa.",
-      "keterangan": "Hari Jumat: diganti Shalat Jumat (lihat baris Shalat Jumat). Ikuti pembimbing/aturan musafir pada Hari 1 (lihat baris Qashar dan Jamak)."
+      "keterangan": "Hari Jumat: diganti Shalat Jumat (lihat baris Shalat Jumat). Ikuti pembimbing/aturan musafir pada Hari 1 (lihat baris Qashar dan Jamak).",
+      "hukum": "wajib",
+      "lokasiKat": [
+        "Masjidil Haram",
+        "Masjid Nabawi",
+        "Hotel"
+      ]
     },
     {
       "nama": "Shalat Ashar",
@@ -945,7 +1102,13 @@ window.UMRAH_DATA = {
       "bacaan": "Rakaat 1–2: Al-Fatihah + surat pendek; rakaat 3–4: Al-Fatihah saja.",
       "lokasi": "Masjidil Haram / Masjid Nabawi (berjamaah), atau hotel.",
       "niat": "Ushallii fardhal 'ashri arba'a raka'aatin mustaqbilal qiblati adaa-an lillaahi ta'aalaa.",
-      "keterangan": "Setelah shalat Ashar tidak dianjurkan shalat sunnah mutlak (waktu terlarang) sampai Maghrib, kecuali yang punya sebab (misalnya shalat sunnah thawaf menurut sebagian ulama)."
+      "keterangan": "Setelah shalat Ashar tidak dianjurkan shalat sunnah mutlak (waktu terlarang) sampai Maghrib, kecuali yang punya sebab (misalnya shalat sunnah thawaf menurut sebagian ulama).",
+      "hukum": "wajib",
+      "lokasiKat": [
+        "Masjidil Haram",
+        "Masjid Nabawi",
+        "Hotel"
+      ]
     },
     {
       "nama": "Shalat Maghrib",
@@ -955,7 +1118,13 @@ window.UMRAH_DATA = {
       "bacaan": "Rakaat 1–2: Al-Fatihah + surat pendek; rakaat 3: Al-Fatihah saja.",
       "lokasi": "Masjidil Haram / Masjid Nabawi (berjamaah), atau hotel.",
       "niat": "Ushallii fardhal maghribi tsalaatsa raka'aatin mustaqbilal qiblati adaa-an lillaahi ta'aalaa.",
-      "keterangan": "Waktu Maghrib singkat; segera bersiap sebelum adzan. Setelahnya shalat ba'diyah Maghrib 2 rakaat."
+      "keterangan": "Waktu Maghrib singkat; segera bersiap sebelum adzan. Setelahnya shalat ba'diyah Maghrib 2 rakaat.",
+      "hukum": "wajib",
+      "lokasiKat": [
+        "Masjidil Haram",
+        "Masjid Nabawi",
+        "Hotel"
+      ]
     },
     {
       "nama": "Shalat Isya",
@@ -965,7 +1134,13 @@ window.UMRAH_DATA = {
       "bacaan": "Rakaat 1–2: Al-Fatihah + surat pendek; rakaat 3–4: Al-Fatihah saja.",
       "lokasi": "Masjidil Haram / Masjid Nabawi (berjamaah), atau hotel.",
       "niat": "Ushallii fardhal 'isyaa-i arba'a raka'aatin mustaqbilal qiblati adaa-an lillaahi ta'aalaa.",
-      "keterangan": "Setelah Isya: ba'diyah Isya 2 rakaat dan Witir (lihat baris sunnah)."
+      "keterangan": "Setelah Isya: ba'diyah Isya 2 rakaat dan Witir (lihat baris sunnah).",
+      "hukum": "wajib",
+      "lokasiKat": [
+        "Masjidil Haram",
+        "Masjid Nabawi",
+        "Hotel"
+      ]
     },
     {
       "nama": "Shalat Jumat (bila Hari 1–14 mencakup hari Jumat)",
@@ -975,7 +1150,12 @@ window.UMRAH_DATA = {
       "bacaan": "Rakaat 1–2: Al-Fatihah + surat (Jumat/Al-A'la, Al-Ghasyiyah, atau yang dimudahkan).",
       "lokasi": "Masjidil Haram atau Masjid Nabawi; datang jauh lebih awal karena sangat padat.",
       "niat": "Ushallii fardhal jumu'ati rak'ataini mustaqbilal qiblati adaa-an ma'muuman lillaahi ta'aalaa.",
-      "keterangan": "Mandi sunnah, berwudhu, dan memakai pakaian terbaik. Buku Kemenhaj menyebut Masjid Jum'ah di Madinah sebagai tempat Jumat pertama Nabi ﷺ (hlm. 303–304). Wanita dan musafir tidak wajib Jumat tetapi shalat Dzuhur; ikuti arahan pembimbing."
+      "keterangan": "Mandi sunnah, berwudhu, dan memakai pakaian terbaik. Buku Kemenhaj menyebut Masjid Jum'ah di Madinah sebagai tempat Jumat pertama Nabi ﷺ (hlm. 303–304). Wanita dan musafir tidak wajib Jumat tetapi shalat Dzuhur; ikuti arahan pembimbing.",
+      "hukum": "wajib",
+      "lokasiKat": [
+        "Masjidil Haram",
+        "Masjid Nabawi"
+      ]
     },
     {
       "nama": "Qashar dan Jamak (khusus musafir)",
@@ -985,7 +1165,12 @@ window.UMRAH_DATA = {
       "bacaan": "Bacaan sama seperti shalat biasa; Maghrib dan Subuh tidak diqashar.",
       "lokasi": "Di pesawat/bus/bandara sesuai kemampuan; hadapkan ke kiblat bila memungkinkan.",
       "niat": "Niat qashar: Ushallii fardhadh dhuhri rak'ataini qashran ... Niat jamak: ... jam'an taqdiiman/ta'khiiran.",
-      "keterangan": "Menurut ketentuan yang dikutip buku Kemenhaj, seseorang dianggap mukim setelah sekitar 4 hari (pendapat Malik, Syafi'i, Abu Tsaur, Ahmad; hlm. 392). Di Makkah (8 hari) dan Madinah (6 hari) Anda kemungkinan sudah berstatus mukim sehingga shalat sempurna (tidak diqashar), kecuali ada pendapat pembimbing yang berbeda. Makmum yang shalat di belakang imam mukim wajib menyempurnakan 4 rakaat."
+      "keterangan": "Menurut ketentuan yang dikutip buku Kemenhaj, seseorang dianggap mukim setelah sekitar 4 hari (pendapat Malik, Syafi'i, Abu Tsaur, Ahmad; hlm. 392). Di Makkah (8 hari) dan Madinah (6 hari) Anda kemungkinan sudah berstatus mukim sehingga shalat sempurna (tidak diqashar), kecuali ada pendapat pembimbing yang berbeda. Makmum yang shalat di belakang imam mukim wajib menyempurnakan 4 rakaat.",
+      "hukum": "wajib",
+      "lokasiKat": [
+        "Bandara / Pesawat",
+        "Perjalanan (bus/kereta)"
+      ]
     },
     {
       "nama": "Menghentikan thawaf/sa'i saat shalat berjamaah",
@@ -995,7 +1180,12 @@ window.UMRAH_DATA = {
       "bacaan": "—",
       "lokasi": "Di Mataf atau Mas'a (pilih shaf terdekat).",
       "niat": "Niat shalat fardhu seperti biasa.",
-      "keterangan": "Thawaf: berhenti, ikut shalat berjamaah, lalu lanjutkan sisa putaran dari tempat mulai masuk shaf (hlm. 386). Sa'i: bagi yang berpendapat shalat berjamaah fardhu 'ain, berhenti lalu lanjutkan; yang berpendapat fardhu kifayah boleh meneruskan (hlm. 397). Jangan mengulang dari awal."
+      "keterangan": "Thawaf: berhenti, ikut shalat berjamaah, lalu lanjutkan sisa putaran dari tempat mulai masuk shaf (hlm. 386). Sa'i: bagi yang berpendapat shalat berjamaah fardhu 'ain, berhenti lalu lanjutkan; yang berpendapat fardhu kifayah boleh meneruskan (hlm. 397). Jangan mengulang dari awal.",
+      "hukum": "wajib",
+      "lokasiKat": [
+        "Mataf (Thawaf)",
+        "Shafa–Marwah (Sa'i)"
+      ]
     },
     {
       "nama": "Shalat sunnah wudhu",
@@ -1005,7 +1195,14 @@ window.UMRAH_DATA = {
       "bacaan": "Al-Fatihah + surat pendek",
       "lokasi": "Hotel, mushala bandara, atau masjid.",
       "niat": "Ushallii sunnatal wudhuu-i rak'ataini lillaahi ta'aalaa.",
-      "keterangan": "Nabi ﷺ menyebut amalan ini kepada Bilal r.a. (HR. Bukhari–Muslim). Tidak dilakukan di waktu terlarang."
+      "keterangan": "Nabi ﷺ menyebut amalan ini kepada Bilal r.a. (HR. Bukhari–Muslim). Tidak dilakukan di waktu terlarang.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Hotel",
+        "Bandara / Pesawat",
+        "Masjidil Haram",
+        "Masjid Nabawi"
+      ]
     },
     {
       "nama": "Shalat sunnah ihram",
@@ -1015,7 +1212,12 @@ window.UMRAH_DATA = {
       "bacaan": "Rakaat 1: Al-Fatihah + Al-Kafirun\nRakaat 2: Al-Fatihah + Al-Ikhlas",
       "lokasi": "Mushala bandara/hotel; di Tan'im: Masjid Aisyah.",
       "niat": "Ushallii sunnatal ihraami rak'ataini lillaahi ta'aalaa.",
-      "keterangan": "Nabi ﷺ berihram setelah shalat (HR. Bukhari–Muslim). Jika tidak memungkinkan (misalnya di pesawat), niat ihram tetap sah. Hindari waktu terlarang untuk shalat sunnah."
+      "keterangan": "Nabi ﷺ berihram setelah shalat (HR. Bukhari–Muslim). Jika tidak memungkinkan (misalnya di pesawat), niat ihram tetap sah. Hindari waktu terlarang untuk shalat sunnah.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Bandara / Pesawat",
+        "Hotel"
+      ]
     },
     {
       "nama": "Tahiyatul masjid (Masjid Nabawi dan masjid lain)",
@@ -1025,7 +1227,12 @@ window.UMRAH_DATA = {
       "bacaan": "Al-Fatihah + surat pendek",
       "lokasi": "Di dalam masjid sebelum duduk.",
       "niat": "Ushallii sunnata tahiyyatil masjidi rak'ataini lillaahi ta'aalaa.",
-      "keterangan": "HR. Bukhari–Muslim. Dikerjakan sebelum duduk; bila shalat fardhu sedang didirikan, langsung ikut berjamaah."
+      "keterangan": "HR. Bukhari–Muslim. Dikerjakan sebelum duduk; bila shalat fardhu sedang didirikan, langsung ikut berjamaah.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Masjid Nabawi",
+        "Masjid Quba & masjid bersejarah"
+      ]
     },
     {
       "nama": "Tahiyat Masjidil Haram",
@@ -1035,7 +1242,12 @@ window.UMRAH_DATA = {
       "bacaan": "Lihat thawaf (B11, B12)",
       "lokasi": "Mataf.",
       "niat": "Niat thawaf umrah (sudah tercakup dalam niat ihram).",
-      "keterangan": "Menurut mayoritas ulama, tahiyat Masjidil Haram adalah thawaf, bukan shalat 2 rakaat. Thawaf umrah sudah mencakupnya."
+      "keterangan": "Menurut mayoritas ulama, tahiyat Masjidil Haram adalah thawaf, bukan shalat 2 rakaat. Thawaf umrah sudah mencakupnya.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Masjidil Haram",
+        "Mataf (Thawaf)"
+      ]
     },
     {
       "nama": "Shalat sunnah thawaf",
@@ -1045,7 +1257,12 @@ window.UMRAH_DATA = {
       "bacaan": "Rakaat 1: Al-Fatihah + Al-Kafirun\nRakaat 2: Al-Fatihah + Al-Ikhlas",
       "lokasi": "Belakang Maqam Ibrahim; jika padat, di mana saja di Masjidil Haram (hindari menghalangi Mataf).",
       "niat": "Ushallii sunnatath thawaafi rak'ataini lillaahi ta'aalaa.",
-      "keterangan": "Q.S. Al-Baqarah: 125; HR. Muslim (hadis Jabir tentang haji Nabi ﷺ). Jangan berhenti lama di belakang Maqam saat ramai."
+      "keterangan": "Q.S. Al-Baqarah: 125; HR. Muslim (hadis Jabir tentang haji Nabi ﷺ). Jangan berhenti lama di belakang Maqam saat ramai.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Maqam Ibrahim",
+        "Masjidil Haram"
+      ]
     },
     {
       "nama": "Shalat sunnah di Hijr Ismail",
@@ -1055,7 +1272,12 @@ window.UMRAH_DATA = {
       "bacaan": "Al-Fatihah + surat pendek",
       "lokasi": "Di dalam Hijr Ismail (area setengah lingkaran di sisi utara Ka'bah).",
       "niat": "Ushallii sunnatan muthlaqan rak'ataini lillaahi ta'aalaa.",
-      "keterangan": "HR. Abu Dawud, Tirmidzi (hadis Aisyah): sebagian Hijr termasuk Ka'bah. Dilakukan bila ada tempat; tidak berdesakan."
+      "keterangan": "HR. Abu Dawud, Tirmidzi (hadis Aisyah): sebagian Hijr termasuk Ka'bah. Dilakukan bila ada tempat; tidak berdesakan.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Hijr Ismail",
+        "Masjidil Haram"
+      ]
     },
     {
       "nama": "Shalat sunnah di Raudhah",
@@ -1065,7 +1287,12 @@ window.UMRAH_DATA = {
       "bacaan": "Al-Fatihah + surat pendek",
       "lokasi": "Raudhah (antara makam/rumah Nabi ﷺ dan mimbar; karpet hijau).",
       "niat": "Ushallii sunnatan muthlaqan rak'ataini lillaahi ta'aalaa.",
-      "keterangan": "HR. Bukhari–Muslim: area ini adalah taman dari taman-taman surga. Waktu di Raudhah terbatas; cukup 2 rakaat singkat dan doa."
+      "keterangan": "HR. Bukhari–Muslim: area ini adalah taman dari taman-taman surga. Waktu di Raudhah terbatas; cukup 2 rakaat singkat dan doa.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Raudhah",
+        "Masjid Nabawi"
+      ]
     },
     {
       "nama": "Shalat sunnah di Masjid Quba",
@@ -1075,7 +1302,11 @@ window.UMRAH_DATA = {
       "bacaan": "Al-Fatihah + surat pendek",
       "lokasi": "Di dalam Masjid Quba (berwudhu dari hotel terlebih dahulu).",
       "niat": "Ushallii sunnatan muthlaqan rak'ataini lillaahi ta'aalaa.",
-      "keterangan": "HR. Ibnu Majah, An-Nasa'i: pahala seperti umrah bagi yang berwudhu di rumah kemudian shalat di Quba."
+      "keterangan": "HR. Ibnu Majah, An-Nasa'i: pahala seperti umrah bagi yang berwudhu di rumah kemudian shalat di Quba.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Masjid Quba & masjid bersejarah"
+      ]
     },
     {
       "nama": "Shalat 2 rakaat setiba dari safar",
@@ -1085,7 +1316,12 @@ window.UMRAH_DATA = {
       "bacaan": "Al-Fatihah + surat pendek",
       "lokasi": "Masjid terdekat.",
       "niat": "Ushallii sunnata qudumis safari rak'ataini lillaahi ta'aalaa.",
-      "keterangan": "HR. Bukhari–Muslim (hadis Ka'b bin Malik): Nabi ﷺ shalat 2 rakaat di masjid setiba dari safar."
+      "keterangan": "HR. Bukhari–Muslim (hadis Ka'b bin Malik): Nabi ﷺ shalat 2 rakaat di masjid setiba dari safar.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Masjid Nabawi",
+        "Bandara / Pesawat"
+      ]
     },
     {
       "nama": "Qabliyah Subuh",
@@ -1095,7 +1331,13 @@ window.UMRAH_DATA = {
       "bacaan": "Rakaat 1: Al-Fatihah + Al-Kafirun\nRakaat 2: Al-Fatihah + Al-Ikhlas",
       "lokasi": "Masjidil Haram, Masjid Nabawi, atau hotel.",
       "niat": "Ushallii sunnatas shubhi rak'ataini qabliyyatan lillaahi ta'aalaa.",
-      "keterangan": "HR. Muslim: lebih baik daripada dunia dan seisinya. Dalam safar, Nabi ﷺ menjaga sunnah Fajar dan Witir (HR. Abu Dawud, riwayat Ibnu Umar)."
+      "keterangan": "HR. Muslim: lebih baik daripada dunia dan seisinya. Dalam safar, Nabi ﷺ menjaga sunnah Fajar dan Witir (HR. Abu Dawud, riwayat Ibnu Umar).",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Masjidil Haram",
+        "Masjid Nabawi",
+        "Hotel"
+      ]
     },
     {
       "nama": "Rawatib Dzuhur",
@@ -1105,7 +1347,13 @@ window.UMRAH_DATA = {
       "bacaan": "Al-Fatihah + surat pendek",
       "lokasi": "Masjid atau hotel.",
       "niat": "Ushallii sunnatadh dhuhri rak'ataini qabliyyatan/ba'diyyatan lillaahi ta'aalaa.",
-      "keterangan": "HR. Bukhari–Muslim. Bagi musafir, sebagian rawatib boleh ditinggalkan, kecuali Subuh dan Witir yang ditekankan."
+      "keterangan": "HR. Bukhari–Muslim. Bagi musafir, sebagian rawatib boleh ditinggalkan, kecuali Subuh dan Witir yang ditekankan.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Masjidil Haram",
+        "Masjid Nabawi",
+        "Hotel"
+      ]
     },
     {
       "nama": "Qabliyah Ashar",
@@ -1115,7 +1363,13 @@ window.UMRAH_DATA = {
       "bacaan": "Al-Fatihah + surat pendek",
       "lokasi": "Masjid atau hotel.",
       "niat": "Ushallii sunnatal 'ashri rak'ataini qabliyyatan lillaahi ta'aalaa.",
-      "keterangan": "HR. Abu Dawud, Tirmidzi (hasan)."
+      "keterangan": "HR. Abu Dawud, Tirmidzi (hasan).",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Masjidil Haram",
+        "Masjid Nabawi",
+        "Hotel"
+      ]
     },
     {
       "nama": "Ba'diyah Maghrib",
@@ -1125,7 +1379,13 @@ window.UMRAH_DATA = {
       "bacaan": "Al-Fatihah + surat pendek",
       "lokasi": "Masjid atau hotel.",
       "niat": "Ushallii sunnatal maghribi rak'ataini ba'diyyatan lillaahi ta'aalaa.",
-      "keterangan": "HR. Bukhari–Muslim."
+      "keterangan": "HR. Bukhari–Muslim.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Masjidil Haram",
+        "Masjid Nabawi",
+        "Hotel"
+      ]
     },
     {
       "nama": "Ba'diyah Isya",
@@ -1135,7 +1395,13 @@ window.UMRAH_DATA = {
       "bacaan": "Al-Fatihah + surat pendek",
       "lokasi": "Masjid atau hotel.",
       "niat": "Ushallii sunnatal 'isyaa-i rak'ataini ba'diyyatan lillaahi ta'aalaa.",
-      "keterangan": "HR. Bukhari–Muslim."
+      "keterangan": "HR. Bukhari–Muslim.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Masjidil Haram",
+        "Masjid Nabawi",
+        "Hotel"
+      ]
     },
     {
       "nama": "Shalat Isyraq",
@@ -1145,7 +1411,12 @@ window.UMRAH_DATA = {
       "bacaan": "Al-Fatihah + surat pendek",
       "lokasi": "Di tempat shalat Subuh, Masjidil Haram atau Masjid Nabawi.",
       "niat": "Ushallii sunnatal isyraaqi rak'ataini lillaahi ta'aalaa.",
-      "keterangan": "HR. Tirmidzi (hasan): pahala seperti haji dan umrah yang sempurna bagi yang shalat Subuh berjamaah, berdzikir hingga terbit matahari, kemudian shalat 2 rakaat."
+      "keterangan": "HR. Tirmidzi (hasan): pahala seperti haji dan umrah yang sempurna bagi yang shalat Subuh berjamaah, berdzikir hingga terbit matahari, kemudian shalat 2 rakaat.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Masjidil Haram",
+        "Masjid Nabawi"
+      ]
     },
     {
       "nama": "Shalat Dhuha",
@@ -1155,7 +1426,13 @@ window.UMRAH_DATA = {
       "bacaan": "Al-Fatihah + surat pendek",
       "lokasi": "Masjid atau hotel.",
       "niat": "Ushallii sunnatadh dhuhaa rak'ataini lillaahi ta'aalaa.",
-      "keterangan": "HR. Muslim."
+      "keterangan": "HR. Muslim.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Masjidil Haram",
+        "Masjid Nabawi",
+        "Hotel"
+      ]
     },
     {
       "nama": "Shalat Tahajud",
@@ -1165,7 +1442,13 @@ window.UMRAH_DATA = {
       "bacaan": "Al-Fatihah + surat pilihan",
       "lokasi": "Masjidil Haram, Masjid Nabawi, atau hotel.",
       "niat": "Ushallii sunnatat tahajjudi rak'ataini lillaahi ta'aalaa.",
-      "keterangan": "Q.S. Al-Isra': 79; HR. Muslim: doa di sepertiga malam terakhir diijabah."
+      "keterangan": "Q.S. Al-Isra': 79; HR. Muslim: doa di sepertiga malam terakhir diijabah.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Masjidil Haram",
+        "Masjid Nabawi",
+        "Hotel"
+      ]
     },
     {
       "nama": "Shalat Witir",
@@ -1175,7 +1458,13 @@ window.UMRAH_DATA = {
       "bacaan": "Rakaat 1: Al-A'la\nRakaat 2: Al-Kafirun\nRakaat 3: Al-Ikhlas",
       "lokasi": "Hotel, atau masjid.",
       "niat": "Ushallii sunnatal witri rak'atan lillaahi ta'aalaa.",
-      "keterangan": "HR. Abu Dawud, An-Nasa'i. Nabi ﷺ tidak meninggalkan witir dalam safar."
+      "keterangan": "HR. Abu Dawud, An-Nasa'i. Nabi ﷺ tidak meninggalkan witir dalam safar.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Hotel",
+        "Masjidil Haram",
+        "Masjid Nabawi"
+      ]
     },
     {
       "nama": "Shalat Jenazah (fardhu kifayah)",
@@ -1185,7 +1474,12 @@ window.UMRAH_DATA = {
       "bacaan": "Takbir 1: Al-Fatihah\nTakbir 2: Shalawat\nTakbir 3: Doa untuk jenazah\nTakbir 4: Doa penutup",
       "lokasi": "Di shaf shalat fardhu, tanpa rukuk/sujud.",
       "niat": "Ushallii 'alaa haadzal mayyiti arba'a takbiiraatin fardhal kifaayati lillaahi ta'aalaa.",
-      "keterangan": "Bukan sunnah, tetapi sering dijumpai jamaah. Cukup mengikuti imam."
+      "keterangan": "Bukan sunnah, tetapi sering dijumpai jamaah. Cukup mengikuti imam.",
+      "hukum": "wajib",
+      "lokasiKat": [
+        "Masjidil Haram",
+        "Masjid Nabawi"
+      ]
     }
   ],
   "lokasi": [
@@ -1196,7 +1490,11 @@ window.UMRAH_DATA = {
       "doa": "Niat umrah (B7), talbiyah (B8, B9) di tempat duduk.",
       "keterangan": "Miqat bagi jamaah yang datang dari arah Yaman/selatan dan jalur ini (HR. Bukhari–Muslim).",
       "dalil": "Syariat miqat sahih (HR. Bukhari–Muslim)",
-      "tips": "Berniat sebelum pesawat melewati titik miqat; jangan menunggu mendarat di Jeddah."
+      "tips": "Berniat sebelum pesawat melewati titik miqat; jangan menunggu mendarat di Jeddah.",
+      "hukum": "wajib",
+      "lokasiKat": [
+        "Bandara / Pesawat"
+      ]
     },
     {
       "nama": "Raudhah (Masjid Nabawi)",
@@ -1205,7 +1503,12 @@ window.UMRAH_DATA = {
       "doa": "Shalat sunnah 2 rakaat, shalawat (B4), doa bebas (B18–B23).",
       "keterangan": "Taman dari taman-taman surga.",
       "dalil": "Ada hadis sahih tentang keutamaan tempat",
-      "tips": "Akses via jadwal resmi (umumnya aplikasi Nusuk); jangan berdesakan."
+      "tips": "Akses via jadwal resmi (umumnya aplikasi Nusuk); jangan berdesakan.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Raudhah",
+        "Masjid Nabawi"
+      ]
     },
     {
       "nama": "Muwajahah Syarifah (depan makam Nabi ﷺ)",
@@ -1214,7 +1517,12 @@ window.UMRAH_DATA = {
       "doa": "Salam B5 singkat; berdoa kepada Allah.",
       "keterangan": "Tempat salam kepada Nabi ﷺ.",
       "dalil": "Amalan para sahabat (Ibnu Umar)",
-      "tips": "Jalan terus bersama arus jamaah setelah salam."
+      "tips": "Jalan terus bersama arus jamaah setelah salam.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Makam Nabi ﷺ",
+        "Masjid Nabawi"
+      ]
     },
     {
       "nama": "Pemakaman Baqi'",
@@ -1223,7 +1531,11 @@ window.UMRAH_DATA = {
       "doa": "Salam dan doa Baqi' (B6b).",
       "keterangan": "Banyak sahabat dimakamkan di sini.",
       "dalil": "Ziarah kubur sahih (HR. Muslim)",
-      "tips": "Hanya pria yang masuk area makam."
+      "tips": "Hanya pria yang masuk area makam.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Baqi' & Uhud (ziarah kubur)"
+      ]
     },
     {
       "nama": "Masjid Quba",
@@ -1232,7 +1544,11 @@ window.UMRAH_DATA = {
       "doa": "Shalat 2 rakaat setelah berwudhu dari rumah/hotel.",
       "keterangan": "Pahala seperti umrah.",
       "dalil": "Dinilai sahih oleh sebagian ulama (HR. Ibnu Majah)",
-      "tips": "Datang dalam keadaan telah berwudhu."
+      "tips": "Datang dalam keadaan telah berwudhu.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Masjid Quba & masjid bersejarah"
+      ]
     },
     {
       "nama": "Syuhada Uhud / Gunung Uhud",
@@ -1241,7 +1557,11 @@ window.UMRAH_DATA = {
       "doa": "Salam syuhada Uhud (B25).",
       "keterangan": "Lokasi perang Uhud dan makam Hamzah r.a.",
       "dalil": "Ziarah sejarah (tidak ada ibadah khusus)",
-      "tips": "Hindari panas siang hari."
+      "tips": "Hindari panas siang hari.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Baqi' & Uhud (ziarah kubur)"
+      ]
     },
     {
       "nama": "Masjid Qiblatain",
@@ -1250,7 +1570,11 @@ window.UMRAH_DATA = {
       "doa": "Shalat tahiyatul masjid.",
       "keterangan": "Tempat turunnya perintah pindah kiblat.",
       "dalil": "Ziarah sejarah",
-      "tips": ""
+      "tips": "",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Masjid Quba & masjid bersejarah"
+      ]
     },
     {
       "nama": "Hajar Aswad",
@@ -1259,7 +1583,12 @@ window.UMRAH_DATA = {
       "doa": "Istilam (usap/cium/isyarat), takbir B11.",
       "keterangan": "Mengusapnya menghapus dosa (HR. Tirmidzi, hasan), bukan karena batu itu berkuasa.",
       "dalil": "Ada hadis hasan; atsar sahabat",
-      "tips": "Jika ramai cukup isyarat tangan; jangan menyikut jamaah."
+      "tips": "Jika ramai cukup isyarat tangan; jangan menyikut jamaah.",
+      "hukum": "wajib",
+      "lokasiKat": [
+        "Mataf (Thawaf)",
+        "Masjidil Haram"
+      ]
     },
     {
       "nama": "Rukun Yamani → Hajar Aswad",
@@ -1268,7 +1597,12 @@ window.UMRAH_DATA = {
       "doa": "Doa sapu jagat B12.",
       "keterangan": "Nabi ﷺ membaca Rabbana atina di antara kedua sudut ini.",
       "dalil": "HR. Abu Dawud (hasan)",
-      "tips": "Cukup dibaca sambil berjalan."
+      "tips": "Cukup dibaca sambil berjalan.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Mataf (Thawaf)",
+        "Masjidil Haram"
+      ]
     },
     {
       "nama": "Multazam",
@@ -1277,7 +1611,12 @@ window.UMRAH_DATA = {
       "doa": "Berdoa bebas: ampunan, hajat dunia-akhirat, orang tua, keluarga.",
       "keterangan": "Tempat doa yang mustajab menurut atsar sahabat.",
       "dalil": "Atsar sahabat; sebagian ulama menilai lemah namun menyunnahkan",
-      "tips": "Hindari berdesakan; boleh berdoa dari jarak dekat jika ramai."
+      "tips": "Hindari berdesakan; boleh berdoa dari jarak dekat jika ramai.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Multazam",
+        "Masjidil Haram"
+      ]
     },
     {
       "nama": "Hijr Ismail",
@@ -1286,7 +1625,12 @@ window.UMRAH_DATA = {
       "doa": "Shalat 2 rakaat, doa bebas.",
       "keterangan": "Sebagian Hijr termasuk Ka'bah; shalat di dalamnya seperti shalat di dalam Ka'bah.",
       "dalil": "HR. Abu Dawud, Tirmidzi (hadis Aisyah)",
-      "tips": "Thawaf harus di luar Hijr; jangan melompati pagar."
+      "tips": "Thawaf harus di luar Hijr; jangan melompati pagar.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Hijr Ismail",
+        "Masjidil Haram"
+      ]
     },
     {
       "nama": "Belakang Maqam Ibrahim",
@@ -1295,7 +1639,12 @@ window.UMRAH_DATA = {
       "doa": "Shalat sunnah thawaf 2 rakaat (B13), doa bebas.",
       "keterangan": "Tempat berpijak Nabi Ibrahim a.s. saat membangun Ka'bah.",
       "dalil": "Q.S. Al-Baqarah: 125; HR. Muslim",
-      "tips": "Jika padat, shalat di mana saja di masjid."
+      "tips": "Jika padat, shalat di mana saja di masjid.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Maqam Ibrahim",
+        "Masjidil Haram"
+      ]
     },
     {
       "nama": "Tempat minum Zamzam",
@@ -1304,7 +1653,12 @@ window.UMRAH_DATA = {
       "doa": "Doa B14 sambil menghadap kiblat.",
       "keterangan": "Zamzam sesuai niat peminumnya.",
       "dalil": "HR. Ibnu Majah",
-      "tips": "Bawa botol pribadi; perhatikan aturan bagasi pulang."
+      "tips": "Bawa botol pribadi; perhatikan aturan bagasi pulang.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Zamzam",
+        "Masjidil Haram"
+      ]
     },
     {
       "nama": "Bukit Shafa",
@@ -1313,7 +1667,11 @@ window.UMRAH_DATA = {
       "doa": "Ayat B15, takbir/tahlil B16, doa panjang menghadap Ka'bah.",
       "keterangan": "Nabi ﷺ berdoa panjang di sini.",
       "dalil": "HR. Muslim (hadis Jabir)",
-      "tips": "Menghadap Ka'bah, tidak perlu naik terlalu tinggi."
+      "tips": "Menghadap Ka'bah, tidak perlu naik terlalu tinggi.",
+      "hukum": "wajib",
+      "lokasiKat": [
+        "Shafa–Marwah (Sa'i)"
+      ]
     },
     {
       "nama": "Bukit Marwah",
@@ -1322,7 +1680,11 @@ window.UMRAH_DATA = {
       "doa": "Tahlil B16 dan doa bebas.",
       "keterangan": "Tempat berakhirnya Sa'i dan tahallul.",
       "dalil": "HR. Muslim (hadis Jabir)",
-      "tips": "Gunting rambut di tempat tukang cukur sekitar Marwah."
+      "tips": "Gunting rambut di tempat tukang cukur sekitar Marwah.",
+      "hukum": "wajib",
+      "lokasiKat": [
+        "Shafa–Marwah (Sa'i)"
+      ]
     },
     {
       "nama": "Mil Akhdhar (penanda hijau)",
@@ -1331,7 +1693,11 @@ window.UMRAH_DATA = {
       "doa": "Pria berlari kecil; doa B17.",
       "keterangan": "Meneladani Siti Hajar yang berlari mencari air.",
       "dalil": "Amalan Nabi ﷺ (HR. Muslim); doa atsar sahabat",
-      "tips": "Wanita berjalan biasa."
+      "tips": "Wanita berjalan biasa.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Shafa–Marwah (Sa'i)"
+      ]
     },
     {
       "nama": "Tan'im (Masjid Aisyah)",
@@ -1340,7 +1706,11 @@ window.UMRAH_DATA = {
       "doa": "Niat umrah (B7), talbiyah (B8).",
       "keterangan": "Aisyah r.a. berumrah dari sini.",
       "dalil": "HR. Bukhari–Muslim",
-      "tips": "Opsional; ulangi urutan rukun."
+      "tips": "Opsional; ulangi urutan rukun.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Ziarah Makkah"
+      ]
     },
     {
       "nama": "Jabal Rahmah / Arafah",
@@ -1349,7 +1719,11 @@ window.UMRAH_DATA = {
       "doa": "Doa bebas.",
       "keterangan": "Tempat wukuf saat haji.",
       "dalil": "Wukuf hanya rukun haji; tidak untuk umrah",
-      "tips": "Ziarah sejarah, bukan ritual umrah."
+      "tips": "Ziarah sejarah, bukan ritual umrah.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Ziarah Makkah"
+      ]
     },
     {
       "nama": "Jabal Nur (Gua Hira) & Jabal Tsur",
@@ -1358,7 +1732,11 @@ window.UMRAH_DATA = {
       "doa": "Mengambil pelajaran sirah.",
       "keterangan": "Tempat turunnya wahyu pertama dan tempat persembunyian hijrah.",
       "dalil": "Ziarah sejarah (tidak ada ibadah khusus)",
-      "tips": "Medan berat; perhatikan fisik dan keselamatan."
+      "tips": "Medan berat; perhatikan fisik dan keselamatan.",
+      "hukum": "sunnah",
+      "lokasiKat": [
+        "Ziarah Makkah"
+      ]
     }
   ],
   "rukun": [
@@ -1510,5 +1888,28 @@ window.UMRAH_DATA = {
       "topik": "Sa'i tidak ada yang sunnah",
       "catatan": "Tidak ada sa'i sunnah; setiap sa'i diikuti bercukur/tahallul. Thawaf sunnah boleh sebanyak mungkin tanpa sa'i. Hlm. 119, 397."
     }
-  ]
+  ],
+  "kategoriLokasi": [
+    "Bandara / Pesawat",
+    "Perjalanan (bus/kereta)",
+    "Hotel",
+    "Masjidil Haram",
+    "Mataf (Thawaf)",
+    "Multazam",
+    "Maqam Ibrahim",
+    "Zamzam",
+    "Shafa–Marwah (Sa'i)",
+    "Hijr Ismail",
+    "Masjid Nabawi",
+    "Raudhah",
+    "Makam Nabi ﷺ",
+    "Baqi' & Uhud (ziarah kubur)",
+    "Masjid Quba & masjid bersejarah",
+    "Ziarah Makkah"
+  ],
+  "keteranganHukum": {
+    "bacaan": "Wajib = bacaan yang termasuk rukun (niat ihram). Selebihnya sunnah/dianjurkan. Talbiyah: sunnah menurut Syafi'i dan Ahmad, wajib menurut Hanafi dan Maliki.",
+    "lokasi": "Wajib = tempat yang menjadi bagian rukun/wajib umrah (miqat, titik mulai thawaf, Shafa dan Marwah). Lainnya sunnah/ziarah.",
+    "shalat": "Wajib = shalat fardhu (termasuk Jumat dan jenazah sebagai fardhu kifayah). Sunnah = shalat sunnah lainnya (rawatib, tahiyatul masjid, thawaf, isyraq, dhuha, tahajud, witir, dll.)."
+  }
 };

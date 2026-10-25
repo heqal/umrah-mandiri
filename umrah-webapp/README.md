@@ -1,45 +1,60 @@
-# Panduan Umrah Mandiri (webapp statis)
+# Panduan Umrah Mandiri (webapp statis, offline, dengan login)
 
-Tanpa build, tanpa server. Bisa dibuka langsung dari `index.html` di komputer, dan bisa diupload ke Netlify.
+Tanpa build dan tanpa server. Upload ke Netlify: ekstrak ZIP, buka https://app.netlify.com/drop, seret foldernya.
 
-## Upload ke Netlify
-1. Buka https://app.netlify.com/drop
-2. Seret folder `umrah-webapp` (atau file ZIP-nya setelah di-ekstrak) ke halaman itu.
-3. Selesai. Buka alamatnya di HP, lalu "Tambahkan ke layar utama" agar bisa dipakai offline.
+## Akun bawaan (WAJIB diganti)
+| Username | Password   | Peran |
+|----------|------------|-------|
+| admin    | admin123   | Admin |
+| jamaah   | jamaah123  | User  |
 
-Untuk memperbarui: seret lagi folder yang sudah diedit ke Netlify (di situs yang sama: Deploys → drag & drop).
+Saat login pertama, aplikasi meminta password diganti.
 
-## Mengedit isi
-Semua isi ada di **`data/content.js`** (format JSON biasa).
-- `meta`: judul, subjudul, catatan kaki.
-- `tabs`: daftar tab. Hapus satu baris untuk menyembunyikan tab itu, atau ubah `label` untuk mengganti namanya.
-- `hariInfo`: nama kota dan judul tiap hari.
-- `itinerary`: langkah-langkah. Setiap langkah punya `id` unik (dipakai untuk centang). Untuk menambah langkah, salin satu blok `{ ... }` dan beri `id` baru, misalnya `"h3-9"`.
-- `bacaan`: bacaan dan doa. Kode seperti `B8` yang ditulis di kolom `bacaan`/`doa` pada itinerary otomatis menjadi tombol yang membuka bacaan tersebut.
-- `shalat`, `lokasi`, `rukun`, `catatan`: sisa tab.
+## Bagaimana aplikasi bisa offline
+1. Saat pertama dibuka dengan internet, browser mendaftarkan **service worker** (`sw.js`), program kecil yang berjalan di antara aplikasi dan jaringan.
+2. Service worker mengunduh semua file aplikasi (HTML, CSS, JS, isi, daftar pengguna) ke **Cache Storage** browser. Lencana di header berubah menjadi "Online · siap offline ✓" bila sudah selesai.
+3. Setelah itu setiap permintaan file dijawab **dari cache lebih dulu**, sehingga aplikasi terbuka cepat dan tetap jalan di pesawat, bus, atau area tanpa sinyal.
+4. Bila ada internet, service worker mengambil versi terbaru di latar belakang dan memperbarui cache. Jika ada perubahan, muncul tombol "Muat ulang".
+5. Data Anda (centang progres, tema, sesi login) disimpan di **localStorage** perangkat, jadi tidak butuh internet.
+6. Login pun jalan offline karena daftar pengguna ikut tersimpan di cache dan pengecekan password dilakukan di browser.
 
-Tips: gunakan tanda kutip ganda `"`, jangan taruh koma setelah elemen terakhir, dan tulis baris baru sebagai `\n`.
-Jika aplikasi tampil kosong setelah diedit, biasanya ada tanda kutip atau koma yang salah; periksa file di https://jsonlint.com (salin isi setelah `window.UMRAH_DATA =` tanpa titik koma).
+Syarat: buka sekali lewat alamat https Netlify (service worker tidak aktif jika file dibuka langsung dari folder), dan jangan membersihkan data situs. **Buka dan tunggu lencana "siap offline" sebelum berangkat.**
 
-## Mengedit tema
-Buka **`css/theme.css`**. Ubah warna (`--accent`, `--gold`, `--bg`, dst.), font (`--font-body`, `--font-arab`), ukuran teks, dan lebar konten. Ada bagian terpisah untuk mode gelap.
-Tata letak ada di `css/style.css` (biasanya tidak perlu diubah). Warna di `manifest.webmanifest` dan `<meta name="theme-color">` di `index.html` mengatur warna bilah browser di HP.
+## Login dan Dashboard Admin
+- **User**: melihat semua tab panduan.
+- **Admin**: sama seperti user, ditambah tab **Admin**: statistik, tambah pengguna, reset password (membuat password sementara), jadikan admin/user, aktifkan/nonaktifkan, hapus, ekspor/impor, dan log aktivitas.
+- Tidak bisa menghapus/menonaktifkan akun sendiri atau admin terakhir.
+- Password disimpan sebagai hash PBKDF2-SHA256 (100.000 iterasi) dengan salt acak, bukan teks biasa.
+- Setelah 5 kali salah, login dikunci 30 detik.
 
-## Fitur
-- Itinerary per hari dengan centang kemajuan (tersimpan di perangkat), pencarian, dan tombol kode bacaan.
-- Bacaan dan doa (Arab, Latin, arti) dengan tombol A−/A+ dan saklar Latin/Arti.
-- Shalat fardhu dan sunnah, lokasi berdoa, rukun dan larangan, catatan.
-- Mode terang/gelap/otomatis, bisa dipasang sebagai aplikasi, dan bisa dipakai offline setelah dibuka sekali dengan internet.
+### Agar perubahan pengguna berlaku di semua perangkat
+Aplikasi ini statis, jadi tidak ada database bersama. Perubahan admin tersimpan di perangkat admin. Untuk menyebarkannya:
+1. Dashboard Admin → **Unduh users.js**.
+2. Ganti file `data/users.js` di folder dengan hasil unduhan.
+3. Upload ulang folder ke Netlify. Perangkat lain menerima daftar baru saat berikutnya online.
 
-## Struktur folder
+Catatan: pengguna yang mengganti password sendiri hanya mengubahnya di perangkatnya; admin perlu mengunggah users.js terbaru agar berlaku di perangkat lain.
+
+### Batasan keamanan (jujur)
+Login di sini adalah **pembatas akses di sisi browser**, bukan keamanan tingkat server. Siapa pun yang tahu alamat situs dan membuka file `data/content.js` langsung dapat membaca isinya, dan pembatasan bisa dilewati oleh yang paham teknis. Cukup untuk membatasi pemakaian awam (kelompok jamaah, keluarga). Bila perlu perlindungan sungguhan: pakai fitur *password protection* Netlify (paket berbayar), atau tambahkan backend (mis. Netlify Functions, Supabase, Firebase) untuk autentikasi dan data pengguna bersama.
+
+## Mengedit isi dan tema
+- Isi: `data/content.js` (itinerary, bacaan, shalat, lokasi, rukun, catatan, daftar kategori lokasi).
+- Tema: `css/theme.css` (warna, font, ukuran, mode gelap).
+- Kategori filter: tiap item bacaan/lokasi/shalat punya `"hukum": "wajib" | "sunnah"` dan `"lokasiKat": [...]`; pilihan lokasi pada filter ada di `"kategoriLokasi"` (nilai harus sama persis).
+- Tambah langkah itinerary: salin satu blok, beri `id` unik. Kode seperti `B8` otomatis menjadi tombol.
+- Setelah mengedit dan upload ulang, perangkat yang sudah memasang aplikasi akan melihat tombol "Muat ulang". Untuk memaksa semua perangkat memuat ulang total, naikkan `VERSION` di `sw.js`.
+
+## Struktur
 ```
-index.html              kerangka halaman
-css/theme.css           TEMA (warna, font, ukuran)
+index.html              kerangka + layar login
+css/theme.css           TEMA
 css/style.css           tata letak
-data/content.js         ISI (itinerary, bacaan, shalat, lokasi, ...)
-js/app.js               logika
+data/content.js         ISI
+data/users.js           PENGGUNA (hash; kelola lewat Dashboard Admin)
+js/auth.js              login, peran, manajemen pengguna
+js/app.js               tampilan, filter, dashboard admin
 sw.js                   cache offline
-manifest.webmanifest    pengaturan "pasang sebagai aplikasi"
-icon.svg                ikon
-_headers                aturan cache untuk Netlify
+manifest.webmanifest    pasang sebagai aplikasi
+_headers                aturan cache Netlify
 ```
